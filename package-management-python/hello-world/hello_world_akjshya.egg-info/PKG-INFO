@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: hello-world-akjshya
+Version: 0.0.1
+Summary: A hello-world example package
+Home-page: https://www.manifoldailearning.in
+Author: Nachiketh
+Author-email: nachiketh@manifoldailearning.in
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent

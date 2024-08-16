@@ -1,0 +1,19 @@
+fileobj = open(filename,mode)
+
+    fileobj - file object returned by open()
+    filename - String name of the file
+    mode - string indicating the file's type and what we want to perform
+
+First Letter of mode indicates the operation :
+
+    r means read
+    w means write. If the file doesn't exist, it will be created. If already exists it will be over-written
+    x means write, but only if file doesn't exist
+    a means append (write after the end) if the file exists.
+
+Second letter of mode is file's type:
+
+    t (or nothing) means text
+    b means binary
+
+close the file once write is complete. fileobj.close()

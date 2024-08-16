@@ -1,0 +1,13 @@
+include *.txt
+include *.md 
+include *.py
+recursive-include ./prediction_model/*
+
+include prediction_model/datasets/*.csv
+include prediction_model/trained_models/*.pkl
+include prediction_model/processing/*.py
+incude prediction_model/VERSION
+include ./tests/*
+
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]

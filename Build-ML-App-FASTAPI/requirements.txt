@@ -1,0 +1,9 @@
+numpy==1.24.3
+pandas==1.5.3
+joblib==1.2.0
+scikit-learn==1.2.2
+fastapi[all]
+scipy==1.10.1
+pytest==7.4.2
+setuptools == 67.8.0
+wheel==0.38.4

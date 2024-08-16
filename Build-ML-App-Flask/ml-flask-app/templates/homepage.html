@@ -1,0 +1,100 @@
+<html>
+
+<head>
+    <title>Welcome to Loan Prediction Application</title>
+</head>
+
+<body>
+    <h2 align="center">Welcome to Loan Prediction Application</h2>
+    <br/>
+    <form action="/predict" method="POST"> 
+        <table align="center" cellpadding="10">
+            <tr>
+                <td>NO OF DEPENDENTS</td>
+                <td>
+                    <input type="number" name="no_of_dependents" maxlength="2" placeholder="no. of dependents" /> 
+                </td>
+            </tr>
+
+            <tr>
+                <td>EDUCATION</td>
+                <td>
+                    <input type="radio" name="education" id="education_graduate" value="Graduate"> Graduate </input>
+                    <input type="radio" name="education" id="education_not_graduate" value="Not Graduate"> Not Graduate </input>
+                </td>
+            </tr>
+
+            <tr>
+                <td>SELF EMPLOYED</td>
+                <td>
+                    <input type="radio" name="self_employed" id="self_employed_yes" value="Yes"> Yes </input>
+                    <input type="radio" name="self_employed" id="self_employed_no" value="No"> No </input>
+                </td>
+            </tr>
+
+            <tr>
+                <td>ANNUAL INCOME</td>
+                <td>
+                    <input type="number" name="income_annum" maxlength="30" placeholder="Annual Income" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>LOAN AMOUNT</td>
+                <td>
+                    <input type="number" name="loan_amount" maxlength="30" placeholder="Loan Amount" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>LOAN TERM (in years)</td>
+                <td>
+                    <input type="number" name="loan_term" maxlength="2" placeholder="term in years" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>CIBIL SCORE</td>
+                <td>
+                    <input type="number" name="cibil_score" maxlength="3" placeholder="CIBIL Score" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>RESIDENTIAL ASSETS VALUE</td>
+                <td>
+                    <input type="number" name="residential_assets_value" placeholder="Residential Assets Value" />
+                </td>
+            </tr>
+            <tr>
+                <td>COMMERCIAL ASSETS VALUE</td>
+                <td>
+                    <input type="number" name="commercial_assets_value" placeholder="Commercial Assets Value" />
+                </td>
+            </tr>
+            <tr>
+                <td>LUXURY ASSETS VALUE</td>
+                <td>
+                    <input type="number" name="luxury_assets_value" placeholder="Luxury Assets Value" />
+                </td>
+            </tr>
+            <tr>
+                <td>BANK ASSET VALUE</td>
+                <td>
+                    <input type="number" name="bank_asset_value" placeholder="Bank Asset Value" />
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Submit"> 
+                </td>
+            </tr>
+
+        </table>
+    </form>
+
+    <h3 align="center"> {{ prediction }} </h3>
+</body>
+
+</html>

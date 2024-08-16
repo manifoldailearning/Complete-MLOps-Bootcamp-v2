@@ -1,0 +1,12 @@
+# 2022 version
+apiVersion: v1
+kind: Service
+metadata:
+  name: cloud-lb
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 5000
+  selector:
+    project: catgif

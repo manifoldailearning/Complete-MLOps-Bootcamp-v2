@@ -1,0 +1,11 @@
+apiVersion: 1
+
+datasources:
+  # <string, required> Sets the name you use to refer to
+  # the data source in panels and queries.
+  - name: Prometheus
+    type: prometheus
+    url: http://prometheus:9090
+    isDefault: true
+    access: proxy
+    editable: true
