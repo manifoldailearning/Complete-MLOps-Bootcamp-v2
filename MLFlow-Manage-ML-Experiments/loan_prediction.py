@@ -21,13 +21,12 @@ categorical_cols = dataset.select_dtypes(include=['object']).columns.tolist()
 categorical_cols.remove('Loan_Status')
 categorical_cols.remove('Loan_ID')
 
-# Filling categorical columns with mode
+# Assign the filled column back. inplace on dataset[col] is a copy under pandas Copy-on-Write.
 for col in categorical_cols:
-    dataset[col].fillna(dataset[col].mode()[0], inplace=True)
+    dataset[col] = dataset[col].fillna(dataset[col].mode()[0])
 
-# Filling Numerical columns with median
 for col in numerical_cols:
-    dataset[col].fillna(dataset[col].median(), inplace=True)
+    dataset[col] = dataset[col].fillna(dataset[col].median())
 
 # Take care of outliers
 dataset[numerical_cols] = dataset[numerical_cols].apply(lambda x: x.clip(*x.quantile([0.05, 0.95])))
